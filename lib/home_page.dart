@@ -22,14 +22,14 @@ class _HomePageState extends State<HomePage> {
             ),
         body: new Block(
             padding: const EdgeInsets.only(top: 8.0),
-            children: config.todos
+            children: widget.todos
                 .map((it) =>
             new TodoListItem(
                 title: it.title,
                 description: it.description,
                 done: it.done,
                 isExpanded: false,
-                isFirstItem: config.todos.indexOf(it) == 0))
+                isFirstItem: widget.todos.indexOf(it) == 0))
                 .toList(),
             ),
         floatingActionButton: new FloatingActionButton(
