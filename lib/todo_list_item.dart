@@ -96,7 +96,7 @@ class _TodoListItemState extends State<TodoListItem>
           new Row(children: [
             getLeadingIcon(),
             new Container(width: 12.0),
-            new Text(config.title, style: getTitleStyle()),
+            new Text(widget.title, style: getTitleStyle()),
           ]),
           new RotationTransition(
               turns: new Tween(begin: 0.0, end: 0.5).animate(_animation),
@@ -114,7 +114,7 @@ class _TodoListItemState extends State<TodoListItem>
           new Container(
               padding: const EdgeInsets.only(left: 52.0),
               child: new Text(
-                  config.description,
+                  widget.description,
                   style: new TextStyle(fontFamily: 'Rubik'),
                   ),
           ),
